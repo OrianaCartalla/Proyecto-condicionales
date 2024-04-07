@@ -1,19 +1,15 @@
-const inputs = document.querySelectorAll('.sticker-input');
-const stickerCount = document.getElementById('sticker-count');
-
-inputs.forEach(input => {
-    input.addEventListener('input', updateStickerCount);
-});
-
-function updateStickerCount() {
-    let total = 0;
-    inputs.forEach(input => {
-        total += parseInt(input.value) || 0;
-    });
-
-    if (total <= 10) {
-        stickerCount.textContent = `Llevas ${total} stickers`;
+document.getElementById('verify-button').addEventListener('click', function() {
+    var digit1 = document.getElementById('digit1').value;
+    var digit2 = document.getElementById('digit2').value;
+    var digit3 = document.getElementById('digit3').value;
+    var password = digit1 + digit2 + digit3;
+    var resultElement = document.getElementById('password-result');
+    
+    if (password === '911') {
+        resultElement.textContent = 'Password 1 correcto';
+    } else if (password === '714') {
+        resultElement.textContent = 'Password 2 es correcto';
     } else {
-        stickerCount.textContent = 'Llevas demasiados stickers';
+        resultElement.textContent = 'Password incorrecto';
     }
-}
+});

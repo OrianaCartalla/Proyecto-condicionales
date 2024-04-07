@@ -4,25 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Stickers</title>
+    <title>Clave</title>
 </head>
 <body>
-    <div class="sticker-container">git 
-        <div class="sticker">
-            <img src="assets/img/bn8w_jegr_210603.jpg" alt="Sticker 1">
-            <input type="number" class="sticker-input" id="sticker1" min="0" max="10" value="0">
-        </div>
-        <div class="sticker">
-            <img src="assets/img/rgvq_ca3u_210527.jpg" alt="Sticker 2">
-            <input type="number" class="sticker-input" id="sticker2" min="0" max="10" value="0">
-        </div>
-        <div class="sticker">
-            <img src="assets/img/yuib_7x9y_210527.jpg" alt="Sticker 3">
-            <input type="number" class="sticker-input" id="sticker3" min="0" max="10" value="0">
-        </div>
-    </div>
-    <p id="sticker-count"></p>
+    <div class="password-container">
+        <h2>Ingresa el password</h2>
+        <select class="password-select" id="digit1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="0">0</option>
 
-    <script src="script.js"></script>
+        </select>
+        <select class="password-select" id="digit2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="0">0</option>
+
+        </select>
+        <select class="password-select" id="digit3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="0">0</option>
+
+        </select>
+        <button id="verify-button">Ingresar</button>
+    </div>
+    <p id="password-result"></p>
+     
+
+    <script> src="script.js"</script>
 </body>
 </html>
