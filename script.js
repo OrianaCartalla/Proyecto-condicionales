@@ -1,8 +1,19 @@
-document.getElementById('imagen').addEventListener('click', function() {
-    var imagen = document.getElementById('imagen');
-    if (imagen.style.border === '4px solid red') {
-        imagen.style.border = '4px solid transparent';
-    } else {
-        imagen.style.border = '4px solid red';
-    }
+const inputs = document.querySelectorAll('.sticker-input');
+const stickerCount = document.getElementById('sticker-count');
+
+inputs.forEach(input => {
+    input.addEventListener('input', updateStickerCount);
 });
+
+function updateStickerCount() {
+    let total = 0;
+    inputs.forEach(input => {
+        total += parseInt(input.value) || 0;
+    });
+
+    if (total <= 10) {
+        stickerCount.textContent = `Llevas ${total} stickers`;
+    } else {
+        stickerCount.textContent = 'Llevas demasiados stickers';
+    }
+}
