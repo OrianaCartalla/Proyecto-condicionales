@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(186, 248, 248);
+}
+
+.contenedor{
+    display: flex;   
+    justify-content: center; 
+    align-items: center;
+    height: 800px;
+}
+
+#imagen{
+    border: 2px solid transparent;
+}
